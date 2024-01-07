@@ -1,12 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import StackNavigator from './navigation/StackNavigator'
 
-export default function App() {
+export default function RegisterScreen() {
   return (
-    <>
-      <StackNavigator/>
-    </>
+    <View>
+      <Text>RegisterScreen</Text>
+    </View>
   )
 }
 

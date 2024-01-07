@@ -1,12 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import StackNavigator from './navigation/StackNavigator'
 
-export default function App() {
+export default function LoginScreen() {
   return (
-    <>
-      <StackNavigator/>
-    </>
+    <View>
+      <Text>LoginScreen</Text>
+    </View>
   )
 }
 
