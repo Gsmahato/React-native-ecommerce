@@ -1,27 +1,58 @@
-import { Image, SafeAreaView, StyleSheet, Text, TextInput, View,} from 'react-native'
-import React from 'react'
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+  ImageBackground,
+} from 'react-native';
 
 export default function LoginScreen() {
   return (
-    <SafeAreaView style={{flex:1,backgroundColor:"white",alignItems:"center"}}>
-      <View>
-        <Image
-        style={{width:160, height:80}}
-        source={require('../assests/logo.png')}
-        height={100} width={150}
-        />
-      </View>
-      <View>
-        <Text>Register or Login with Mobile Number</Text>
-      </View>
-      <View style={{marginTop:70}}>
-        <View style={{flexDirection:'row',alignItems:'center',gap:5,backgroundColor:'#D0D0D0',paddingVertical:5,borderRadius:5,marginTop:30}}>
-          <TextInput placeholder='Enter your mobile number'/>
-
+    <ImageBackground
+      source={require('../assests/bg.jpg')}
+      style={styles.backgroundImage}>
+      <SafeAreaView style={{flex: 1, alignItems: 'center'}}>
+        <View style={{marginTop: 130}}>
+          <Text style={{color: 'white', fontSize: 50, fontWeight: '700'}}>
+            Sabbhe
+          </Text>
         </View>
-      </View>
-    </SafeAreaView>
-  )
+        <View>
+          <Text style={{color: 'white', marginTop: 300, fontSize: 16}}>
+            Register or Login with Mobile Number
+          </Text>
+        </View>
+        <View>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              alignContent: 'center',
+              backgroundColor: '#ffffff',
+              paddingVertical: 5,
+              borderRadius: 5,
+              marginTop: 30,
+              minWidth: 340,
+              justifyContent: 'center',
+            }}>
+            <TextInput
+              style={{fontSize: 16}}
+              placeholder="Enter your mobile number"
+            />
+          </View>
+        </View>
+        <View>
+        </View>
+      </SafeAreaView>
+    </ImageBackground>
+  );
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+  },
+});
